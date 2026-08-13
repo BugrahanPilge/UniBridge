@@ -619,3 +619,50 @@ body {
     }
 
 }
+/* ---------- Mobile Menu ---------- */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    color: #0f172a;
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .navbar nav {
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        padding: 20px 5%;
+
+        background-color: #ffffff;
+
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+}
