@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: unibridge-db
+    environment:
+      POSTGRES_USER: unibridge
+      POSTGRES_PASSWORD: unibridge_dev
+      POSTGRES_DB: unibridge
+    ports:
+      - "5432:5432"
+    volumes:
+      - unibridge_pg_data:/var/lib/postgresql/data
+
+volumes:
+  unibridge_pg_data:
